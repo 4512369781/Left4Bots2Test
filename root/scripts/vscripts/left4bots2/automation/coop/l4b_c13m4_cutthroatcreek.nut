@@ -71,7 +71,7 @@ Msg("Including " + ::Left4Bots.BaseModeName + "/l4b_c13m4_cutthroatcreek automat
 		case 4:
 			// *** TASK 5. Door open, regroup just before the 1st drop
 			
-			::Left4Bots.Automation.DoRegroupAt(Vector(-3807.154053, -5786.145020, 322.953735));
+			::Left4Bots.Automation.DoRegroupAt(Vector(-3807.154053, -5786.145020, 322.953735), 60);
 			::Left4Bots.Automation.step++;
 			
 			break;
@@ -92,7 +92,7 @@ Msg("Including " + ::Left4Bots.BaseModeName + "/l4b_c13m4_cutthroatcreek automat
 			if (curFlowPercent >= 36)
 			{
 				if (!::Left4Bots.Automation.TaskExists("bots", "RegroupAt"))
-					::Left4Bots.Automation.DoRegroupAt(Vector(-2356.734131, -1685.954468, 44.206959));
+					::Left4Bots.Automation.DoRegroupAt(Vector(-2356.734131, -1685.954468, 44.206959), 60);
 				::Left4Bots.Automation.step++;
 			}
 			break;

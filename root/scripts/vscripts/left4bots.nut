@@ -3552,6 +3552,19 @@ Support vanilla weapon preference.
 	return true;
 }
 
+// Is the bot with the given userid ahead (on the flow) of the given flow position?
+::Left4Bots.IsBotAheadOfPosition <- function (userid, flowpos, threshold = 0)
+{
+	if (!(userid in SurvivorFlow))
+		return false;
+	
+	local myFlow = SurvivorFlow[userid].flow + threshold;
+	if (myFlow >= flowpos)
+		return true;
+	
+	return false;
+}
+
 // Returns whether the bots should close the saferoom door after the survivor with the given userid entered
 ::Left4Bots.ShouldCloseSaferoomDoor <- function (userid, range = 0)
 {
